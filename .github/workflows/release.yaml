@@ -1,0 +1,32 @@
+name: Build and release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.91.2/${{ env.HUGO_FILE_NAME }}
+          tar -xvzf ${{ env.HUGO_FILE_NAME }} hugo
+          mv hugo $HOME/hugo
+        env:
+          HUGO_FILE_NAME: "hugo_extended_0.91.2_Linux-64bit.tar.gz"
+      - name: Hugo Build
+        run: $HOME/hugo --verbose
+      - name: Deploy to S3
+        run: aws s3 sync public/ s3://${{ secrets.S3_BUCKET_NAME }}/ --delete --region eu-central-1
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id=${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths='/*' --region eu-central-1
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

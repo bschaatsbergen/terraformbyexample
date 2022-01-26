@@ -1,0 +1,19 @@
+baseURL = 'https://terraformbyexample.com'
+languageCode = "en-us"
+title = "Terraform by Example"
+pygmentsCodeFences = false
+pygmentsUseClasses = false
+paginate = 9999
+minify = true
+disableHugoGeneratorInject = true
+
+[Author]
+  name = "Terraform by Example"
+
+[params]
+  description = "Terraform by Example"
+
+[permalinks]
+  posts = ":filename"
+  pages = "/:slug"
+  photos = ":filename"
