@@ -1,13 +1,13 @@
-name: Build and release
+name: Release
 
 on:
-  push:
-    branches:
-      - main
+  create:
+    tags:
+      - v*
 
 jobs:
-  build:
-    name: Build and release
+  release:
+    name: release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
