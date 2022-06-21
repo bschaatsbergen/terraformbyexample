@@ -29,11 +29,12 @@ variable "max_instance_count" {
 
 ```terraform
 variable "max_instance_count" {
-    type = number
+  type = number
   default = 3
 
   validation {
-condition     = var.max_instance_count <= 5
+    condition     = var.max_instance_count <= 5
     error_message = "max_instance_count is less than or equal to 5"
+  }
 }
 ```
