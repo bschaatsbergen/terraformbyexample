@@ -8,7 +8,7 @@ It's a common practice to declare an empty variable and set its value during exe
 
 > Variables can be set in many different ways (e.g., through a [.tfvars file](https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files), [environment variables](https://www.terraform.io/language/values/variables#environment-variables), [command line flags](https://www.terraform.io/language/values/variables#variables-on-the-command-line), etc).
 
-#### Declaring a variable:
+#### Declaring a variable
 
 ```hcl
 variable "max_instance_count" {
@@ -16,18 +16,18 @@ variable "max_instance_count" {
 }
 ```
 
-#### Declaring a variable with a default value:
+#### Declaring a variable with a default value
 
-```hcl
+```terraform
 variable "max_instance_count" {
   type = number
   default = 3
 }
 ```
 
-#### Declaring a variable with a default value and validation:
+#### Declaring a variable with a default value and validation
 
-```hcl
+```terraform
 variable "max_instance_count" {
   type = number
   default = 3
