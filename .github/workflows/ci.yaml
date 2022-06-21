@@ -1,4 +1,4 @@
-name: Release
+name: ci
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  release:
-    name: Build and release
+  ci:
+    name: markdown-lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
