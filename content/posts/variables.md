@@ -3,7 +3,7 @@ title: "Variables"
 date: "2022-04-30 12:03:00"
 ---
 
-Terraform variables are used to control behavior of resources. 
+Terraform variables are used to control behavior of resources.
 It's a common practice to declare an empty variable and set its value during execution.
 
 > Variables can be set in many different ways (e.g., through a [.tfvars file](https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files), [environment variables](https://www.terraform.io/language/values/variables#environment-variables), [command line flags](https://www.terraform.io/language/values/variables#variables-on-the-command-line), etc).

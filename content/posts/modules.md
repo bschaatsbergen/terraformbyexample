@@ -5,7 +5,7 @@ date: "2022-04-29 12:00:00"
 
 Every `.tf` file in any directory is considered a module.
 
-We can simply say that a module is a collection of Terraform files in a single directory. 
+We can simply say that a module is a collection of Terraform files in a single directory.
 
 #### What is a module?
 
