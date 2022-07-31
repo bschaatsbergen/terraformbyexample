@@ -9,7 +9,7 @@ The [Terraform Registry](https://registry.terraform.io/browse/providers) hosts p
 
 ### Using the provider block
 
-Every provider has a configuration block that is used to configure the provider. It's common to create a `provider.tf` file to manage this configuration.
+Every provider has a configuration block that is used to configure the provider.
 
 ```terraform
 provider "aws" {
@@ -17,23 +17,13 @@ provider "aws" {
 }
 ```
 
-### Using the provider block together with the Terraform block
-
-Providers are often constrained to a range of Terraform versions. This allows you to specify the version range of the provider that's compatible with the version of your Terraform installation.
-
 ```terraform
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
+provider "google" {
+  project = "my-project-id"
+  region  = "us-central1"
 }
 ```
+
+Every provider has a set of arguments that are used to configure the provider, look up the respective provider documentation for more information.
 
 **Continue to [Modules](../modules)**
