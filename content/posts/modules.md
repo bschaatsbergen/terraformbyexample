@@ -15,26 +15,21 @@ Modules can be published to the [Terraform registry](https://registry.terraform.
 
 #### Creating a module
 
-A module can be as simple as a single `.tf` file. The variables that you declare in your module are the input variables that are passed to your module.
+A module can be as simple as a single `.tf` file.
 
-The below code is a module that creates a single Amazon S3 bucket with the name "example-bucket".
+The below code is a module that creates an S3 bucket named "example-bucket".
 
 ```terraform
 resource "aws_s3_bucket" "default" {
   bucket = "example-bucket"
 }
-
-resource "aws_s3_bucket_acl" "default" {
-  bucket = aws_s3_bucket.default.id
-  acl    = "private"
-}
 ```
 
 #### Using a module
 
-Calling a module is done by using the `module` block. Every module block requires a source argument that specifies the location of the module.
+Calling a module is done by using the `module` block.
 
-The `source` argument can either be the path to a local directory
+The `source` argument is required and can either be the path to a local directory
 
 ```terraform
 module "s3" {
@@ -50,6 +45,6 @@ module "s3" {
 }
 ```
 
-It's good to note that modules should be logical abstractions. To achieve that, we should use variables. In the next section we will learn how to use variables and how they can help us to create such a logical abstraction.
+In the next section we will learn how to use variables and how they can help us to create logical abstractions from our Terraform modules.
 
 **Continue to [Variables](../variables)**
