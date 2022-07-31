@@ -20,6 +20,8 @@ variable "max_instance_count" {
 
 #### Declaring a variable with a default value
 
+If a default value is present, the variables is considered to be optional and the default value will be used if no value is set.
+
 ```terraform
 variable "max_instance_count" {
   type = number
@@ -27,6 +29,8 @@ variable "max_instance_count" {
 ```
 
 #### Declaring a variable with a default value and validation
+
+You can create validation rules for a variable by adding a validation block.
 
 ```terraform
 variable "max_instance_count" {
@@ -37,5 +41,31 @@ variable "max_instance_count" {
     condition     = var.max_instance_count <= 5
     error_message = "max_instance_count should be less than or equal to 5!"
   }
+}
+```
+
+#### Using a variable in a module
+
+To use a variable in a module, you need to use `var.`
+
+```terraform
+variable "bucket_name" {
+  type        = string
+  description = "The name of the S3 bucket"
+}
+
+resource "aws_s3_bucket" "default" {
+  bucket = var.bucket_name
+}
+```
+
+#### Calling a module using input variables
+
+Variables act as input variables for a module, this allows other users to set their own values for a variable.
+
+```terraform
+module "s3" {
+  source = "path/to/s3-module"
+  bucket_name = "my-bucket"
 }
 ```
