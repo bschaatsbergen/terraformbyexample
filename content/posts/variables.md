@@ -46,7 +46,7 @@ variable "max_instance_count" {
 
 #### Using a variable in a module
 
-To use a variable in a module, you need to use `var.`
+To use a variable in a module, you need to use `var.<variable name>`
 
 ```terraform
 variable "bucket_name" {
