@@ -14,7 +14,7 @@ Ensure that you have Terraform installed and that you have the `terraform` comma
 
 Create the `hello.tf` file
 
-```bash
+```terraform
 $ cat <<EOT >> hello.tf
 resource "null_resource" "default" {
   provisioner "local-exec" {
@@ -26,13 +26,13 @@ EOT
 
 Initialize and apply the changes using Terraform
 
-```bash
+```terraform
 $ terraform init && terraform apply
 ```
 
 The output should look like this
 
-```bash
+```terraform
 Terraform will perform the following actions:
 
   # null_resource.default will be created

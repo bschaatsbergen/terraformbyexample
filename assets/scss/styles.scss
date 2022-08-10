@@ -81,17 +81,15 @@ a.heading-link {
 }
 
 pre {
-    padding: .5rem;
+    padding: 1rem;
     overflow: auto;
-    overflow-x: scroll;
-    overflow-wrap: normal;
 }
 
 code, pre {
     font-family: San Francisco Mono, Monaco, "Consolas", "Lucida Console","DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
     font-size: normal;
     font-size: small;
-    background: #eee
+    background: #eee;
 }
 
 code {
@@ -201,3 +199,6 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+@import 'highlightjs/atom-one-light';
+@import 'highlightjs/highlightjs-copy';
