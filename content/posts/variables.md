@@ -69,3 +69,7 @@ module "s3" {
   bucket_name = "my-bucket"
 }
 ```
+
+Want to learn more about Variables? [Check out the docs](https://www.terraform.io/language/values/variables).
+
+**Continue to [Outputs](../outputs)**

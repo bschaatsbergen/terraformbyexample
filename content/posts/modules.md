@@ -47,4 +47,6 @@ module "s3" {
 
 In the next section we will learn how to use variables and how they can help us to create logical abstractions from our Terraform modules.
 
+Want to learn more about Modules? [Check out the docs](https://www.terraform.io/language/modules).
+
 **Continue to [Variables](../variables)**
