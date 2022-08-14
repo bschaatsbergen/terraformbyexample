@@ -26,4 +26,6 @@ provider "google" {
 
 Every provider has a set of arguments that are used to configure the provider, look up the respective provider documentation for more information.
 
+Want to learn more about Providers? [Check out the docs](https://www.terraform.io/language/providers).
+
 **Continue to [Modules](../modules)**

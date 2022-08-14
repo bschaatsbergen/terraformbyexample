@@ -29,7 +29,7 @@ output "example_compute_instance_name" {
 
 #### Declaring a sensitive output value
 
-Sensitive values are masked in the output of `terraform plan` and `terraform apply`. 
+Sensitive values are masked in the output of `terraform plan` and `terraform apply`.
 
 > Note: Terraform will persist the value to the state file as cleartext, anyone that can view the state file can see the value.
 
@@ -57,3 +57,7 @@ resource "google_compute_instance_iam_member" "member" {
   member        = "user:bruno@example.com"
 }
 ```
+
+Want to learn more about Outputs? [Check out the docs](https://www.terraform.io/language/values/outputs).
+
+**Continue to [Operators](../operators)**
