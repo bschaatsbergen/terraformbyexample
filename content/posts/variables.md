@@ -72,4 +72,4 @@ module "s3" {
 
 Want to learn more about Variables? [Check out the docs](https://www.terraform.io/language/values/variables).
 
-**Continue to [Outputs](../outputs)**
+**Continue to [Locals](../locals)**
