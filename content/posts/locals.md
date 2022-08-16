@@ -13,7 +13,7 @@ locals {
 }
 ```
 
-Locals can be referenced in a module using `local.<local name>`. 
+Locals can be referenced in a module using `local.<local name>`.
 
 Here we're creating a `aws_kms_key` and a `aws_cloudwatch_log_group` that both require a retention argument in days. To prevent maintaining the retention days in separate places we can use a local called e.g. `retention_days`.
 
