@@ -37,7 +37,7 @@ resource "aws_elasticache_cluster" "example" {
 
 #### Using a ternary operator to optionally create resources
 
-Conditionally deploy a Redis ElastiCache cluster to only the dev environment. 
+Conditionally deploy a Redis ElastiCache cluster to only the dev environment.
 
 Here we are using the `count` argument to determine the number of times we should create this resource, if it's not a dev environment, we'll set the count to 0 and therefore not create the resource at all.
 
