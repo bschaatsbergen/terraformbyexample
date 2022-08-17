@@ -24,7 +24,7 @@ locals {
 
 resource "aws_kms_key" "example" {
   description             = "Example KMS key"
-  deletion_window_in_days = local.prod_deletion_window_in_days
+  deletion_window_in_days = local.retention_days
 }
 
 resource "aws_cloudwatch_log_group" "example" {
