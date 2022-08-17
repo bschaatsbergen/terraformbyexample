@@ -3,7 +3,7 @@ title: "Conditionals"
 date: "2022-08-01 19:25:00"
 ---
 
-Infrastructure is often deployed using certain conditions, you might want to deploy a less nodes to development than to production.
+Infrastructure is often deployed using certain conditions, you might want to deploy a less nodes to development than to production or not deploy a certain resource at all.
 
 Terraform provides a way to conditionally write resources using a ternary operator, the conditional expression is as following:
 
