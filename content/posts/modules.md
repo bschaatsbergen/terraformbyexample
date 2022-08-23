@@ -41,9 +41,18 @@ or a URL to a remote module.
 
 ```terraform
 module "s3" {
-  source = "github.com/example/s3-module"
+  source = "git::https://github.com/example/s3-module.git"
 }
 ```
+
+It's even possible to select a specific revision 
+
+```terraform
+module "s3" {
+  source = "git::https://github.com/example/s3-module.git?ref=v1.1.0"
+}
+```
+
 
 In the next section we will learn how to use variables and how they can help us to create logical abstractions from our Terraform modules.
 
