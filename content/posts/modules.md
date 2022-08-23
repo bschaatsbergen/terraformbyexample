@@ -45,7 +45,7 @@ module "s3" {
 }
 ```
 
-It's even possible to select a specific revision 
+It's even possible to select a specific revision
 
 ```terraform
 module "s3" {
