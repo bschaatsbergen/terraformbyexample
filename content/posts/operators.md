@@ -55,4 +55,4 @@ variable "user_count" {
 
 Want to learn more about Operators? [Check out the docs](https://www.terraform.io/language/expressions/operators).
 
-**Continue to [Conditionals](../conditionals)**
+**Continue to [Count](../count)**
