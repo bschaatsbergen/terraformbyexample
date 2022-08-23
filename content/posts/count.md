@@ -10,7 +10,6 @@ The `count` argument is used to determine the amount of instances to create for 
 ```terraform
 resource "google_redis_instance" "example" {
   count          = 2
-
   name           = "redis-instance-${count.index}"
   memory_size_gb = 10
 }
