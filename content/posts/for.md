@@ -35,3 +35,38 @@ In the above example, `regions_indices` its value is a tuple containing the indi
 
 #### Declaring a for loop that produces an object
 
+If we use curly braces to annotate our `for` loop, we produce an object. When producing an object we must provide an additional expression using `=>`, this constructs the values of the object for each key we iterate through.
+
+```terraform
+locals {
+  numbers         = [2, 4, 6]
+  squared_numbers = {for number in local.numbers : number => number * number}
+}
+````
+
+The above example produces the following object:
+
+```console
+$ terraform console
+> local.squared_numbers
+{
+  "2" = 4
+  "4" = 16
+  "6" = 36
+}
+```
+
+#### Declare a for loop that filters out elements
+
+Optionally you can include an `if` clause in the `for` loop to filter out elements.
+
+```terraform
+data "aws_regions" "available" {}
+
+locals {
+  regions = [for name in data.aws_regions.available.names : name if != ""]
+```
+
+Want to learn more about For loops? [Check out the docs](https://www.terraform.io/language/expressions/for).
+
+**Continue to [For each](../foreach)**
