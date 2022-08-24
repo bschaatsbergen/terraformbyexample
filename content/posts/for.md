@@ -65,6 +65,7 @@ data "aws_regions" "available" {}
 
 locals {
   regions = [for name in data.aws_regions.available.names : name if != ""]
+}
 ```
 
 Want to learn more about For loops? [Check out the docs](https://www.terraform.io/language/expressions/for).
