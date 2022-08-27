@@ -44,6 +44,6 @@ This object has 2 attributes:
 - `each.key` - Map key or set member corresponding to the current iteration.
 - `each.value` - Map value corresponding to the current iteration. (If a set was provided, it would have the same value as the `each.key` has).
 
-Want to learn more about the for_each keyword? [Check out the docs](https://www.terraform.io/language/meta-arguments/for_each).
+Want to learn more about the for_each argument? [Check out the docs](https://www.terraform.io/language/meta-arguments/for_each).
 
 **Continue to [Dynamics](../dynamics)**
