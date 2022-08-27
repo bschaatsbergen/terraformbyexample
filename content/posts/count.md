@@ -19,6 +19,6 @@ resource "google_redis_instance" "example" {
 
 When you're using the `count` argument, a `count` object becomes available in the resource scope. The `count.index` object represents the index of the current instance in the count. The index starts at 0, if you have a resource with a `count` of 4, the `count.index` object will be 0, 1, 2, and 3.
 
-Want to learn more about the Count keyword? [Check out the docs](https://www.terraform.io/language/meta-arguments/count).
+Want to learn more about the Count argument? [Check out the docs](https://www.terraform.io/language/meta-arguments/count).
 
 **Continue to [Conditionals](../conditionals)**
