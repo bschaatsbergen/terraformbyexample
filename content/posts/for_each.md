@@ -1,9 +1,9 @@
 ---
-title: "For_each"
+title: "For each"
 date: "2022-08-24 17:26:00"
 ---
-With `for_each` argument you can create multiple instances of a particular resource.
-The `for_each` argument accepts a map or a set of strings, and creates an instance for each item in that map or set.
+With the `for_each` argument you can create multiple instances for a particular resource.
+The `for_each` argument either accepts a map or a set of strings, and creates an instance for each item in that map or set.
 The `for_each` argument can be used in both modules and every resource type.
 
 
@@ -59,14 +59,14 @@ resource "google_redis_instance" "map_with_objects_example" {
 ```
 
 #### Using the each.key
-When you're using the `for_each` argument, the `each` object becomes available in the resource scope.
+When you're using the `for_each` argument, the `each` object is available in the resource scope.
 The `each.key` object represents the map key or set member of the current instance in the `for_each`.
 
 #### Using the each.value
 
-When you're using the `for_each` argument, the `each` object becomes available in the resource scope.
+When you're using the `for_each` argument, the `each` object is available in the resource scope.
 The `each.value` object represents the map value or set member of the current instance in the `for_each`.
-In a set the `each.value` and `each.key` are the same
+In a set the `each.value` and `each.key` are the same.
 
 Want to learn more about the for_each keyword? [Check out the docs](https://www.terraform.io/language/meta-arguments/for_each).
 
