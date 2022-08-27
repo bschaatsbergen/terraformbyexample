@@ -11,6 +11,9 @@ ul-indent:
 no-hard-tabs:
   code_blocks: false
 
+# MD046
+style: fenced
+
 # Disabled Rules
 # https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md
 
@@ -43,3 +46,11 @@ no-space-in-code: false
 
 # MD040
 fenced-code-language: false
+
+# MD046  
+code-block-style:
+  style: fenced
+
+# MD048
+code-fence-style:
+  style: backtick
