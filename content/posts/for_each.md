@@ -12,7 +12,7 @@ It's important to know that you can only use either `count` or `for_each` in a g
 
 #### Creating multiple resources using the for_each argument
 
-Here we are creating 2 redis instances with different names
+Here we are creating 2 Redis instances with different names
 
 ```terraform
 resource "google_redis_instance" "set_example" {
@@ -22,7 +22,7 @@ resource "google_redis_instance" "set_example" {
 }
 ```
 
-Additionally, we can pass a map to the `for_each` argument and specify the size for each redis instance
+Additionally, we can pass a map to the `for_each` argument and specify the size for each Redis instance using the `each` object.
 
 ```terraform
 resource "google_redis_instance" "simple_map_example" {
@@ -36,35 +36,13 @@ resource "google_redis_instance" "simple_map_example" {
 }
 ```
 
-It is also possible to pass a map of objects to the `for_each` argument
+#### The each object
 
-```terraform
-resource "google_redis_instance" "map_with_objects_example" {
-  for_each = {
-    regular = {
-      name = "regular-redis"
-      size = 10
-    }
-    special = {
-      name = "special-redis"
-      size = 20
-    }
-  }
+In resources where the `for_each` argument is used, an `each` object becomes available.
+This object has 2 attributes:
 
-  name           = each.value.name
-  memory_size_gb = each.value.size
-}
-```
-
-#### Using the each.key
-When you're using the `for_each` argument, the `each` object is available in the resource scope.
-The `each.key` object represents the map key or set member of the current instance in the `for_each`.
-
-#### Using the each.value
-
-When you're using the `for_each` argument, the `each` object is available in the resource scope.
-The `each.value` object represents the map value or set member of the current instance in the `for_each`.
-In a set the `each.value` and `each.key` are the same.
+- `each.key` - Map key or set member corresponding to the current iteration.
+- `each.value` - Map value corresponding to the current iteration. (If a set was provided, it would have the same value as the `each.key` has).
 
 Want to learn more about the for_each keyword? [Check out the docs](https://www.terraform.io/language/meta-arguments/for_each).
 
