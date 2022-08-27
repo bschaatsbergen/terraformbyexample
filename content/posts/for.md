@@ -40,7 +40,7 @@ If we use curly braces to annotate our `for` loop, we produce an object. When pr
 ```terraform
 locals {
   numbers         = [2, 4, 6]
-  squared_numbers = {for number in local.numbers : number => number * number}
+     squared_numbers = {for number in local.numbers : number => number * number}
 }
 ````
 
