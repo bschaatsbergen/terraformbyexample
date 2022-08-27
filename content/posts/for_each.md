@@ -12,8 +12,6 @@ It's important to know that you can only use either `count` or `for_each` in a g
 
 #### Creating multiple resources using the for_each argument
 
-A for_each argument accepts a set of strings or a map
-
 Here we are creating 2 redis instances with different names
 
 ```terraform
