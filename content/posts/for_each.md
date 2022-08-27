@@ -25,7 +25,7 @@ resource "google_redis_instance" "set_example" {
 Additionally, we can pass a map to the `for_each` argument and specify the size for each Redis instance using the `each` object.
 
 ```terraform
-resource "google_redis_instance" "simple_map_example" {
+resource "google_redis_instance" "map_example" {
   for_each = {
     regular = 10
     special = 20
