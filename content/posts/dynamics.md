@@ -20,12 +20,12 @@ resource "google_compute_firewall" "default" {
     protocol = "tcp"
     ports    = ["80", "8080", "1000-2000"]
   }
-  
+
   allow {
     protocol = "udp"
-    ports = ["3000-4000"]
+    ports    = ["3000-4000"]
   }
-  
+
   source_tags = ["example"]
 }
 ```
@@ -51,7 +51,7 @@ resource "google_compute_firewall" "default" {
 }
 ```
 
-The label of the `dynamic` block, `"allow"` in the example above, defines what kind of nested block to create.
+The label of the `dynamic` block, `"allow"` in the example above, corresponds to an argument of the resource.
 
 #### The iterator object
 
