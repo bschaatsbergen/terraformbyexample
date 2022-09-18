@@ -56,7 +56,6 @@ The label of the `dynamic` block, `"allow"` in the example above, corresponds to
 #### The iterator object
 
 The iterator object, `allow` in the example above has 2 attributes:
-This object has 2 attributes:
 
 - `key` - Map key or set member corresponding to the current iteration.
 - `value` - Map value corresponding to the current iteration. (If a set was provided, it would have the same value as the `each.key` has).
