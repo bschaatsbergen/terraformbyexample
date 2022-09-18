@@ -59,4 +59,4 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 Yahoo, "Hello World" is printed to the console.
 
-**Continue to [Providers](../providers)**
+**Continue to [State](../state)**

@@ -11,6 +11,8 @@ The [Terraform Registry](https://registry.terraform.io/browse/providers) hosts p
 
 Every provider has a configuration block that is used to configure the provider.
 
+It's a common practice to create this file in a `provider.tf`.
+
 ```terraform
 provider "aws" {
   region = "us-east-1"
