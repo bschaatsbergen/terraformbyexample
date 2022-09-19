@@ -3,7 +3,7 @@ title: "Splat"
 date: "2022-09-14 19:26:00"
 ---
 
-The [splat expression](https://www.terraform.io/language/expressions/splat) is a syntactic sugar variant of the  [for expression](https://www.terraform.io/language/expressions/for), they produce the same result with the same input but are easier to declare.
+The [splat expression](https://www.terraform.io/language/expressions/splat) is a syntactic sugar variant of the [for expression](https://www.terraform.io/language/expressions/for), they produce the same result with the same input but are easier to declare.
 
 For example, the following expressions are equivalent: `[for o in var.instances : o.name]` and `var.instances[*].name`.
 If `var.instances` has an attribute `name`, both expressions return a list containing all the instance names.
@@ -37,4 +37,4 @@ Resources that use the `for_each` argument will appear in expressions as a map o
 You can't refer to a resource using the splat operator `[*]` if the resource uses a `for_each` argument. This is because in this case the resource is a map of objects rather than a list of objects.
 The splat operator applies only to lists.
 
-Want to learn more about splat expressions ? [Check out the docs](https://www.terraform.io/language/expressions/splat).
+Want to learn more about splat expressions? [Check out the docs](https://www.terraform.io/language/expressions/splat).
