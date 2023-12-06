@@ -51,7 +51,7 @@ Think of importing manual created objects into the Terraform state, or removing 
 
 See below for a list of commands that are available to perform various operations on your Terraform state.
 
-* `teraform state list` lists all the resources managed by terraform
+* `terraform state list` lists all the resources managed by terraform
 * `terraform import` - adds to the state resources that were created outside terraform
 * `terraform state rm` - removes the resource from the state, tells terraform to "forget" about the resource
 * `terraform state mv` - moves the resource inside the terraform state, this command is useful when attempting to rename a resource in terraform
