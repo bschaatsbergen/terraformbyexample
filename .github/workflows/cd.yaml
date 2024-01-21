@@ -1,4 +1,4 @@
-name: Release
+name: CD
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - v*
 
 jobs:
-  release:
-    name: release
+  cd:
+    name: cd
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

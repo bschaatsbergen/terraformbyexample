@@ -1,0 +1,94 @@
+github-actions:
+  - changed-files:
+      - any-glob-to-any-file:
+        - '.github/**'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+        - '.markdownlint.yml'
+
+site-config:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'config.toml'
+
+legal:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'LICENSE'
+
+hello-world:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/hello-world.md'
+
+state:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/state.md'
+
+splat:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/splat.md'
+
+providers:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/providers.md'
+
+outputs:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/outputs.md'
+
+operators:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/operators.md'
+
+modules:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/modules.md'
+
+locals:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/locals.md'
+
+for-each:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/for_each.md'
+
+for:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/for.md'
+
+dynamics:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/dynamics.md'
+
+data-sources:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/data_sources.md'
+
+count:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/count.md'
+
+conditionals:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/conditionals.md'
+
+about:
+  - changed-files:
+      - any-glob-to-any-file:
+        - 'content/posts/about.md'
