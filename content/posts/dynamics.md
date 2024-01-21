@@ -61,3 +61,5 @@ The iterator object, `allow` in the example above has 2 attributes:
 - `value` - Map value corresponding to the current iteration. (If a set was provided, it would have the same value as the `each.key` has).
 
 Want to learn more about the Dynamics expression? [Check out the docs](https://www.terraform.io/language/expressions/dynamic-blocks).
+
+**Continue to [Splat](../splat)**

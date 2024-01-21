@@ -38,3 +38,5 @@ You can't refer to a resource using the splat operator `[*]` if the resource use
 The splat operator applies only to lists.
 
 Want to learn more about splat expressions? [Check out the docs](https://www.terraform.io/language/expressions/splat).
+
+**Continue to [Data Sources](../data_sources)**

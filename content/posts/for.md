@@ -70,4 +70,4 @@ locals {
 
 Want to learn more about For loops? [Check out the docs](https://www.terraform.io/language/expressions/for).
 
-**Continue to [For each](../foreach)**
+**Continue to [For each](../for_each)**
